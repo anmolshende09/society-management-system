@@ -8,6 +8,8 @@
   - Superpowers Engineering Framework integrated (`using-superpowers`, `brainstorming`, `writing-plans`, `executing-plans`, `test-driven-development`, `systematic-debugging`, `verification-before-completion`, etc.)
   - Canonical Documentation Suite created in `docs/canonical/`
   - Dynamic, updatable `AGENTS.md` operating constitution active
+  - GitHub Collaborative Framework established on `origin/main` (`https://github.com/anmolshende09/society-management-system.git`)
+  - Team collaboration artifacts active: `.github/workflows/ci.yml`, `.github/ISSUE_TEMPLATE/`, `.github/pull_request_template.md`, `.github/CODEOWNERS`, `CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md`
 - **Workspace Status**:
   - 23 workspace projects across `apps/`, `packages/`, and `modules/`
   - Monorepo tooling: Turborepo + pnpm workspaces + TypeScript 5.7 strict
