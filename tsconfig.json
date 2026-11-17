@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@society/shared-kernel": ["packages/shared-kernel/src/index.ts"],
+      "@society/contracts": ["packages/contracts/src/index.ts"],
+      "@society/config": ["packages/config/src/index.ts"],
+      "@society/testing": ["packages/testing/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist", ".next"]
+}

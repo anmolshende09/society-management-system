@@ -1,0 +1,37 @@
+{
+  "name": "society-erp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-tenant, India-first Society ERP SaaS Platform",
+  "packageManager": "pnpm@10.5.2",
+  "engines": {
+    "node": ">=22.12.0 <25",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:integration": "turbo run test:integration",
+    "verify:boundaries": "depcruise --config packages/config/dependency-cruiser.cjs modules packages",
+    "verify:contracts": "turbo run verify:contracts",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "clean": "turbo run clean && rimraf node_modules",
+    "db:bootstrap": "tsx tools/db/bootstrap.ts",
+    "db:migrate": "tsx tools/db/migrate.ts",
+    "db:verify": "tsx tools/db/verify-rls.ts",
+    "db:seed:dev": "tsx tools/db/seed.ts --env=dev",
+    "db:reset": "tsx tools/db/reset.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "dependency-cruiser": "^16.10.0",
+    "prettier": "^3.5.0",
+    "tsx": "^4.19.3",
+    "turbo": "^2.4.4",
+    "typescript": "^5.7.3"
+  }
+}

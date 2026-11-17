@@ -1,0 +1,27 @@
+{
+  "name": "@society/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Next.js 16 Web Application and Backend-For-Frontend (BFF)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "echo @society/web lint ok",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf .next dist"
+  },
+  "dependencies": {
+    "@society/shared-kernel": "workspace:*",
+    "@society/contracts": "workspace:*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "^15.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "typescript": "^5.7.3"
+  }
+}

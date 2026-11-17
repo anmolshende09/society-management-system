@@ -1,0 +1,20 @@
+{
+  "name": "@society/module-audit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Immutable audit logging and activity timeline tracking",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@society/shared-kernel": "workspace:*",
+    "@society/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

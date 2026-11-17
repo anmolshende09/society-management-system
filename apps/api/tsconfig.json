@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "composite": true
+  },
+  "references": [
+    { "path": "../../packages/shared-kernel" },
+    { "path": "../../packages/contracts" },
+    { "path": "../../modules/platform/tenancy" },
+    { "path": "../../modules/platform/identity" },
+    { "path": "../../modules/platform/notification" },
+    { "path": "../../modules/platform/documents" },
+    { "path": "../../modules/platform/audit" },
+    { "path": "../../modules/platform/workflow" },
+    { "path": "../../modules/platform/search" },
+    { "path": "../../modules/platform/reporting-core" },
+    { "path": "../../modules/resident" },
+    { "path": "../../modules/finance" },
+    { "path": "../../modules/workforce" },
+    { "path": "../../modules/maintenance" },
+    { "path": "../../modules/security" },
+    { "path": "../../modules/community" }
+  ],
+  "include": ["src/**/*"]
+}

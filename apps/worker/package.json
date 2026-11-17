@@ -1,0 +1,37 @@
+{
+  "name": "@society/worker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Background Queue Consumer, Schedulers, and Outbox Relay",
+  "main": "./dist/main.js",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsx watch src/main.ts",
+    "start": "node dist/main.js",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@society/shared-kernel": "workspace:*",
+    "@society/contracts": "workspace:*",
+    "@society/module-tenancy": "workspace:*",
+    "@society/module-identity": "workspace:*",
+    "@society/module-notification": "workspace:*",
+    "@society/module-documents": "workspace:*",
+    "@society/module-audit": "workspace:*",
+    "@society/module-workflow": "workspace:*",
+    "@society/module-search": "workspace:*",
+    "@society/module-reporting-core": "workspace:*",
+    "@society/module-resident": "workspace:*",
+    "@society/module-finance": "workspace:*",
+    "@society/module-workforce": "workspace:*",
+    "@society/module-maintenance": "workspace:*",
+    "@society/module-security": "workspace:*",
+    "@society/module-community": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}

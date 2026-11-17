@@ -1,0 +1,91 @@
+name: 🐛 Bug Report
+description: Report a reproducible bug, defect, or unexpected regression
+title: "[BUG] <Short description>"
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue! Please review [specs.md](specs.md) and [docs/canonical/](docs/canonical/) to confirm expected domain behavior before submitting.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Affected Subsystem / Module
+      description: Select the primary module where the bug occurs.
+      options:
+        - "L0: Kernel (Identity / Tenancy / Notification / Documents / Audit / Workflow)"
+        - "L1: Resident (Units / Occupants / Vehicles / Directory)"
+        - "L2: Finance (Billing / Invoices / Payments / Expenses / Tally)"
+        - "L3: Workforce (Staff / Shifts / Attendance / Payroll)"
+        - "L4: Maintenance (Complaints / Tasks / Assets / Inventory)"
+        - "L5: Security (Gates / Guards / Visitors / Parcels / Parking / SOS)"
+        - "L5: Community (Amenities / Notices / Events / Polls)"
+        - "App: API Gateway (NestJS Fastify)"
+        - "App: Worker Process (BullMQ / Outbox Relay)"
+        - "App: Web Client (Next.js 16)"
+        - "App: Platform Admin UI"
+        - "Database / Migrations / RLS"
+        - "DevOps / Docker / CI"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Provide details on what happened versus what was expected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Start local stack: `docker compose -f infra/docker/compose.yaml up -d`
+        2. Execute: `...`
+        3. Observe error: `...`
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened according to specs.md and domain rules?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: rls_impact
+    attributes:
+      label: Multi-Tenant / RLS Security Impact
+      description: Does this bug cross tenant boundaries, leak data, or bypass Row-Level Security?
+      options:
+        - "No (Standard logic/UI issue)"
+        - "POTENTIAL TENANT CONTEXT BLEED (High Priority)"
+        - "RLS Policy Bypass / Data Leak (CRITICAL)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: financial_impact
+    attributes:
+      label: Financial Impact (Gate G-FIN)
+      description: Does this involve money, billing, taxes, or payments?
+      options:
+        - "No financial involvement"
+        - "Involves Paise / Money calculations"
+        - "Involves Invoicing / Payment reconciliation / Gate G-FIN"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Terminal Logs / Error Output
+      description: Paste any relevant terminal logs, stack traces, or screenshots.
+      render: shell

@@ -1,0 +1,41 @@
+# Society ERP SaaS — Repository Code Owners
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Replace or supplement teammate GitHub handles as roles are assigned.
+
+# Global default owner
+* @anmolshende09
+
+# Architecture & Governance
+/specs.md @anmolshende09
+/AGENTS.md @anmolshende09
+/docs/adr/ @anmolshende09
+/docs/canonical/ @anmolshende09
+
+# Core Platform & Kernel (L0)
+/modules/platform/ @anmolshende09
+/packages/shared-kernel/ @anmolshende09
+/packages/contracts/ @anmolshende09
+
+# Domain Modules (L1 - L5)
+# Teammate assignments can be mapped below:
+/modules/resident/ @anmolshende09
+/modules/finance/ @anmolshende09
+/modules/workforce/ @anmolshende09
+/modules/maintenance/ @anmolshende09
+/modules/security/ @anmolshende09
+/modules/community/ @anmolshende09
+
+# Applications
+/apps/api/ @anmolshende09
+/apps/worker/ @anmolshende09
+/apps/web/ @anmolshende09
+/apps/platform-admin/ @anmolshende09
+
+# Database, Migrations & RLS
+/db/ @anmolshende09
+/tools/db/ @anmolshende09
+
+# Infrastructure & CI/CD
+/infra/ @anmolshende09
+/.github/ @anmolshende09

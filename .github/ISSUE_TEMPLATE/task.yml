@@ -1,0 +1,49 @@
+name: 📋 Sprint Task / Work Package
+description: Track a planned sprint task, refactoring work order, or infrastructure improvement
+title: "[TASK] <Task title>"
+labels: ["task"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Task Category
+      options:
+        - "Backend Module Implementation"
+        - "Frontend / UI Component"
+        - "Database & Migrations"
+        - "Testing & Quality Assurance"
+        - "DevOps / Infrastructure / CI"
+        - "Documentation / ADR / Specs"
+    validations:
+      required: true
+
+  - type: input
+    id: assignee_role
+    attributes:
+      label: Primary Owner / Module Lead
+      description: Indicate which team member or role owns this task.
+      placeholder: "@github_username"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Scope & Implementation Steps
+      description: Detailed breakdown of the work to be completed.
+      placeholder: |
+        - [ ] Step 1: Write failing test in `...`
+        - [ ] Step 2: Implement domain logic
+        - [ ] Step 3: Run `pnpm typecheck` and `pnpm verify:boundaries`
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Definition of Done / Acceptance Criteria
+      description: What concrete evidence proves this task is complete?
+      placeholder: |
+        - [ ] Unit tests pass with `pnpm test`
+        - [ ] TypeScript compiles cleanly across all packages
+        - [ ] Zero dependency boundary violations
+    validations:
+      required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Society ERP Architecture & Specs
+    url: https://github.com/anmolshende09/society-management-system/blob/main/specs.md
+    about: Read the technical specifications baseline and domain boundaries before raising issues.
+  - name: Architecture Decision Records (ADRs)
+    url: https://github.com/anmolshende09/society-management-system/tree/main/docs/adr
+    about: View approved architectural decisions and design proposals.

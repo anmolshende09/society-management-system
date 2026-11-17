@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "composite": true
+  },
+  "references": [
+    { "path": "../../packages/shared-kernel" },
+    { "path": "../../packages/contracts" },
+    { "path": "../platform/tenancy" },
+    { "path": "../platform/identity" },
+    { "path": "../resident" },
+    { "path": "../finance" }
+  ],
+  "include": ["src/**/*"]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@society/contracts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Zod contracts, OpenAPI schemas, and Event Envelopes",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@society/shared-kernel": "workspace:*",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

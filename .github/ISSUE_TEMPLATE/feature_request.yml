@@ -1,0 +1,67 @@
+name: ✨ Feature / Specification Implementation
+description: Propose or track implementation of a feature or work order from specs.md
+title: "[FEAT] <Short description>"
+labels: ["enhancement", "feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose, plan, or track new features aligned with [specs.md](specs.md) and approved ADRs.
+
+  - type: input
+    id: spec_reference
+    attributes:
+      label: Specification / ADR Reference
+      description: Section in specs.md or approved ADR ID (e.g., `specs.md Section 1.4 Resident`, `ADR-004`).
+      placeholder: "e.g., specs.md Section 1.4, REQ-FIN-001"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Architecture Layer (DAG)
+      description: Modules in a higher layer cannot be synchronously called by lower layers.
+      options:
+        - "L0: Kernel (Shared-Kernel, Identity, Tenancy, Notification, Documents, Audit, Workflow)"
+        - "L1: Resident"
+        - "L2: Finance"
+        - "L3: Workforce"
+        - "L4: Maintenance"
+        - "L5: Security & Community"
+        - "Apps / Web / Platform-Admin"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary & User Value
+      description: Describe what this feature does and why it is needed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: contracts
+    attributes:
+      label: Proposed Interface / Event Contracts
+      description: Detail public contracts (`modules/<module>/src/api/`) or published/consumed events.
+      placeholder: |
+        - API Contract: `modules/.../src/api/...`
+        - Published Events: `resident.occupant.registered`
+        - Consumed Events: `finance.dues.changed`
+      render: markdown
+
+  - type: checkboxes
+    id: safety_checks
+    attributes:
+      label: Architectural Compliance Checklist
+      options:
+        - label: "Conforms to Directed Acyclic Graph (DAG) layer rules (Section 1.3)"
+          required: true
+        - label: "All cross-module references use UUIDs without cross-schema foreign keys"
+          required: true
+        - label: "All tenant tables include `tenant_id` and PostgreSQL Row-Level Security"
+          required: true
+        - label: "All financial calculations use integer paise via `Money` value object (Gate G-FIN)"
+          required: false

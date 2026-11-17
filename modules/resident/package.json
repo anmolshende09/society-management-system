@@ -1,0 +1,22 @@
+{
+  "name": "@society/module-resident",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Property hierarchy, units, residents, vehicles, and move-in/out workflows",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@society/shared-kernel": "workspace:*",
+    "@society/contracts": "workspace:*",
+    "@society/module-tenancy": "workspace:*",
+    "@society/module-identity": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

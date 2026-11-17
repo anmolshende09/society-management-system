@@ -1,0 +1,3 @@
+"postgres" "postgres_dev_password"
+"app_runtime" "LOCAL_DEV_PASSWORD"
+"app_migrator" "LOCAL_MIGRATOR_PASSWORD"
